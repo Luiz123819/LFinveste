@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Investimento</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="Style (1).css">
+    <!-- Link Site ->Codigo Icones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- . -->
+     <!-- Link Site Font awesome -->
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+      <!-- . -->
+</head>
+
+<body style="background-color:#ffffff;">
+    <nav class="Nav-bar">
+        <div class="Topo">
+            <h1><img src="Imagens/1 (1).png" alt class="Logo"></h1>
+    </nav>
+
+    <div class="container">
+        <div class="BodyHome">
+
+            <div class="Texto">
+                <h1><b>Simulador de Investimentos LFinveste</b></h1>
+
+                <p style=" margin-top: 20px;">
+                    O Simulador de Investimento LFinvestimento é uma
+                    ferramenta
+                    inovadora e fácil de usar, desenvolvida para
+                    ajudar
+                    investidores a planejar e acompanhar o
+                    crescimento
+                    de seus
+                    investimentos ao longo do tempo. </p>
+
+            </div>
+
+            <img src="Imagens/ImgTextHome.png" alt class="ImgTexto">
+        </div>
+        <form action class="form form-control" style="background-color: darkblue;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 style="color: white;">Simule Agora:</h1>
+                    <hr>
+                </div>
+                <p>
+                <div class="row">
+                    <div class=" col-7 col-sm-5 col-md-5 col-lg-3 col-xl-3 inputsFORM">
+
+                        <p> <label style="color: rgb(255, 255, 255);" for="text">Valor
+                                Inicial:</label>
+                            <input class="input" type="number" id="ValorInicial" placeholder="Digite Aqui...">
+                        </p>
+
+                    </div>
+                    <div class="col-7 col-sm-5  col-md-5 col-lg-3 col-xl-3">
+
+                        <p> <label style="color: rgb(255, 250, 250);" for="text">Valor Mensal:</label>
+                            <input class="input" type="number" id="ValorMensal" placeholder="Digite Aqui...">
+                        </p>
+
+                    </div>
+                    <div class="col-7 col-sm-5  col-md-5 col-lg-3 col-xl-3">
+                        <p> <label style="color: rgb(255, 255, 255);" for="text">Juros Anual:</label>
+
+                            <input class="input" type="number" id="JurosAnual" placeholder="Digite Aqui...">
+                        </p>
+
+                    </div>
+                    <div class=" col-7 col-sm-5  col-md-5 col-lg-3 col-xl-3">
+
+                        <p> <label style="color: rgb(255, 255, 255);" for="text">Tempo em Ano:</label>
+                            <input class="input" type="number" id="TempoEmAno" placeholder="Digite Aqui...">
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class=" col-sm-12 ">
+                    <button class="btnCalc btn btn-success" onclick="Calcular()">Calcular</button>
+                    <button class="btn btn-danger" onclick="Clear()">Limpar</button>
+                </div>
+
+            </div>
+        </form>
+        <div class="Tabela">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th>Mês</th>
+                        <th>Valor Inicial</th>
+                        <th>Aporte Mensal</th>
+                        <th>Taxa ao Ano</th>
+                        <th>Total sem Juros</th>
+                        <th>Rendimento Mensal</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="investmentTableBody">
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="Tipos_De_Investimentos_Content col-sm-12 ">
+                <h1>Tipos de Investimentos</h1>
+                <p>
+                    Encontre as melhores opções de investimentos
+                    e
+                    conte com as nossos especialistas para
+                    aumentar
+                    os
+                    seus resultados.
+                </p>
+            </div>
+            <!-- Slides -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="slider">
+                        <!-- Radio Buttons -->
+                        <div class="slides">
+                            <input type="radio" name="radio-btn" id="RadioButton01">
+                            <input type="radio" name="radio-btn" id="RadioButton02">
+                            <input type="radio" name="radio-btn" id="RadioButton03">
+                            <input type="radio" name="radio-btn" id="RadioButton04">
+                            <input type="radio" name="radio-btn" id="RadioButton05" class="MobileAUTObtn">
+                            <input type="radio" name="radio-btn" id="RadioButton06" class="MobileAUTObtn">
+                            <input type="radio" name="radio-btn" id="RadioButton07" class="MobileAUTObtn">
+                            <input type="radio" name="radio-btn" id="RadioButton08" class="MobileAUTObtn">
+                           
+
+                            <!-- FIM - Radio Buttons -->
+                            <!-- Sliders Images -->
+
+                            <div class="Card  first" id="img01">
+                                <div class="TextoImage">
+                                    <h1>Renda Fixa</h1>
+                                    <p>CDB, LCI, LCA, Poupança,
+                                        Debêntures, CRI e
+                                        CRA</p>
+                                </div>
+                                <a href="https://www.infomoney.com.br/guias/renda-fixa/" class="Carrossel_Link">Saiba
+                                    mais -></a>
+                            </div>
+                            <div class="Card" id="img02">
+                                <div class="TextoImage">
+                                    <h1>Renda Variável</h1>
+                                    <p>Ações, Fundos
+                                        Imobiliários e Day
+                                        Trade</p>
+                                </div>
+                                <a href="https://www.infomoney.com.br/guias/renda-variavel/" class="Carrossel_Link">Saiba
+                                    mais -></a>
+                            </div>
+                            <div class="Card" id="img03">
+                                <div class="TextoImage">
+                                    <h1>Tesouro Direto</h1>
+                                    <p>Tesouro Selic, Prefixado,
+                                        IPCA e
+                                        RendA+</p>
+                                </div>
+                                <a href="https://www.infomoney.com.br/guias/tesouro-direto/" class="Carrossel_Link">Saiba
+                                    mais -></a>
+                            </div>
+                            <div class="Card" id="img04">
+                                <div class="TextoImage">
+                                    <h1>Criptomoedas</h1>
+                                    <p>Bitcoin, Ethereum, Solana
+                                        e Muito
+                                        mais</p>
+                                </div>
+                                <a href="https://www.mercadobitcoin.com.br/" class="Carrossel_Link">Saiba
+                                    mais -></a>
+                            </div>
+                            <div class="Card" id="img05">
+                                <div class="TextoImage">
+                                    <h1>Fundos de
+                                        Investimento</h1>
+                                    <p>Invista nos melhores
+                                        Fundos com
+                                        apenas
+                                        R$100,00</p>
+                                </div> <a href="https://www.gov.br/investidor/pt-br/investir/tipos-de-investimentos/fundos-de-investimentos/o-que-sao-fundos-de-investimentos#:~:text=Fundo%20de%20Investimento%20%C3%A9%20uma,forma%20conjunta%20no%20mercado%20financeiro." class="Carrossel_Link02">Saiba
+                                    mais -></a>
+                               
+                            </div>
+                            <div class="Card" id="img06">
+                                <div class="TextoImage">
+
+                                    <h1>Previdência Privada</h1>
+                                    <p>Garanta sua
+                                        aposentadoria</p>
+                                </div>
+                                <a href="https://www.serasa.com.br/blog/previdencia-privada-o-que/" class="Carrossel_Link" id="Carrossel_Link04">Saiba
+                                    mais -></a>
+                            </div>
+                            <div class="Card" id="img07">
+                                <div class="TextoImage">
+                                    <h1>Ofertas Públicas</h1>
+                                    <p>Tenha acesso ás
+                                        principais
+                                        ofertas públicas do
+                                        mercado.</p>
+                                </div>
+                                <a href="https://atendimento.xpi.com.br/artigo/2030-o-que-e-oferta-publica-ipo" class="Carrossel_Link03">Saiba
+                                    mais -></a>
+                            </div>
+                            <div class="Card" id="img08">
+                                <div class="TextoImage">
+                                    <h1>COE</h1>
+                                    <p>Certificado de Operações
+                                        Estruturadas</p>
+                                </div>
+                                <a href="https://www.infomoney.com.br/guias/coe/" class="Carrossel_Link">Saiba
+                                    mais -></a>
+                            </div>
+
+                            <!-- FIM - Sliders Images -->
+                            <!-- Navigation Auto -->
+                            <div class="NavigationAuto">
+                                <div class="Auto-Btn01"></div>
+                                <div class="Auto-Btn02"></div>
+                                <div class="Auto-Btn03"></div>
+                                <div class="Auto-Btn04"></div> 
+                                <div class="Auto-Btn05" id="MobileAUTObtn"></div>
+                                <div class="Auto-Btn06" id="MobileAUTObtn"></div>
+                                <div class="Auto-Btn07" id="MobileAUTObtn"></div>
+                                <div class="Auto-Btn08" id="MobileAUTObtn"></div>   
+                            </div>
+                            <!-- FIM - Navigation Auto -->
+
+                        </div>
+                        <!-- Manual Navigation -->
+                        <div class="ManualNavigation">
+                           
+                            <label for="RadioButton01" class="Manual-Btn"></label>
+                            <label for="RadioButton02" class="Manual-Btn"> </label>
+                            <label for="RadioButton03" class="Manual-Btn"></label>
+                            <label for="RadioButton04" class="Manual-Btn"></label>
+                            <label for="RadioButton05" class="Manual-Btn" id="MobileAUTObtn" ></label>
+                            <label for="RadioButton06" class="Manual-Btn" id="MobileAUTObtn"> </label>
+                            <label for="RadioButton07" class="Manual-Btn" id="MobileAUTObtn"></label>
+                            <label for="RadioButton08" class="Manual-Btn" id="MobileAUTObtn"></label>
+                           
+                        </div>
+                        <!-- FIM - Manual Navigation -->
+                    </div>
+                    <!-- FIM - Slides -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="FooterContent">
+            <div class="FooterContacts">
+                <h1><img src="Imagens/1 (1).png" alt class="Logo"></h1>
+                <div class="footer_social_media">
+
+                    <a href="https://www.instagram.com/" class="footer_link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://pt-br.facebook.com/" class="footer_link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://web.whatsapp.com/" class="footer_link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="Footer-List">
+                <li>
+                    <h2>Parcerias</h2>
+                </li>
+                <li id="List-Item"><a href="#">Bradesco</a></li>
+                <li id="List-Item"><a href="#">Banco do
+                        Brasil</a></li>
+                <li id="List-Item"><a href="#">XP
+                        investe</a></li>
+
+            </ul>
+            <div id="footer_subscribe">
+                <h3 id="Titulo_SUBSCRIBE"><b>Subscribe</b></h3>
+
+                <p id="ParagraphoFOOTER">Enter your e-mail to
+                    get
+                    notified about
+                    our news solutions
+                </p>
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="footer_copyright" class="p-3 text-center">
+            &#169
+            2024 all rights
+        </div>
+
+    </footer>
+
+    <script src="bootstrap.js"></script>
+    <script src="Operacao (1).js"></script>
+</body>
+
+</html>
